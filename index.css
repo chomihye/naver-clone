@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+header,
+main {
+  width: 70%;
+  margin: 10px auto;
+}
+
+.header-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-wrap-btn {
+  display: flex;
+  flex-direction: row;
+}
+
+.hamburger-btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: no-repeat center;
+  background-image: url("./img/ham.png");
+  background-size: 70px;
+}
+
+.naverpay-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: no-repeat center;
+  background-image: url("./img/pay.png");
+  background-size: 35px;
+}
+
+.notice-btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: no-repeat center;
+  background-image: url("./img/noti.png");
+  background-size: 70px;
+}
+
+.naver-search-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.naver-search {
+  width: 700px;
+  height: 60px;
+  border: 1px solid green;
+  border-radius: 30px;
+}
+
+.menu-icon {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+.mail > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-btn {
+  width: 50px;
+  height: 50px;
+  background: no-repeat center;
+  background-image: url("./img/mail.png");
+  background-size: 120px;
+}
+
+.section-wrap {
+  display: flex;
+}
+
+.section-left {
+  width: 65%;
+}
+.section-left-news {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin: 50px auto 20px;
+}
+
+.news-wrap {
+  border-bottom: 1px solid lightgray;
+  padding: 20px;
+}
+
+.news-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.news-title {
+  background-color: rgb(238, 238, 238);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.news-list li {
+  border: 1px solid lightgray;
+  padding: 20px 0px;
+}
+
+.section-left-recommendation {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.recommendation-header {
+  display: flex;
+  flex-direction: row;
+}/*# sourceMappingURL=index.css.map */
