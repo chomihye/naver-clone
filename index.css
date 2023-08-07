@@ -54,14 +54,14 @@ main {
 .naver-search {
   width: 700px;
   height: 60px;
-  border: 1px solid green;
+  border: 1px solid #03c75a;
   border-radius: 30px;
 }
 
 .menu-icon {
   display: flex;
   justify-content: space-around;
-  width: 45%;
+  width: 50%;
   margin: 0 auto;
   flex-direction: row;
 }
@@ -77,20 +77,22 @@ main {
   height: 50px;
   background: no-repeat center;
   background-image: url("./img/mail.png");
-  background-size: 120px;
+  background-size: 130px;
 }
 
 .section-wrap {
   display: flex;
+  margin-top: 50px;
 }
 
 .section-left {
   width: 65%;
+  margin-right: 30px;
 }
 .section-left-news {
   border: 1px solid lightgray;
   border-radius: 10px;
-  margin: 50px auto 20px;
+  margin: 0px auto 20px;
 }
 
 .news-wrap {
@@ -102,9 +104,17 @@ main {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  font-size: 17px;
+  color: #999;
+}
+.news-header a {
+  margin: 0px 8px;
+  color: #666;
 }
 
 .news-title {
+  display: flex;
+  justify-content: space-between;
   background-color: rgb(238, 238, 238);
   border-radius: 5px;
   padding: 20px;
@@ -116,8 +126,29 @@ main {
   flex-wrap: wrap;
 }
 .news-list li {
+  display: flex;
+  justify-content: center;
+  width: 16.6666666667%;
   border: 1px solid lightgray;
   padding: 20px 0px;
+}
+
+.more-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.more-news div {
+  margin: 0 10px;
+}
+.more-news button {
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  background-color: white;
 }
 
 .section-left-recommendation {
@@ -125,7 +156,185 @@ main {
   border-radius: 10px;
 }
 
+.recommendation-wrap {
+  border-bottom: 1px solid lightgray;
+  padding: 20px;
+}
+
 .recommendation-header {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
+  font-size: 17px;
+  color: #999;
+}
+.recommendation-header a {
+  color: #666;
+  margin: 0 8px;
+}
+
+.list-btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 5px;
+  padding: 5px;
+}
+.list-btn-wrap div {
+  padding-right: 10px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.list-btn {
+  display: flex;
+}
+.list-btn li {
+  margin-right: 3px;
+}
+.list-btn > li button {
+  width: 60px;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 20px;
+}
+.list-btn > li:nth-child(2) button {
+  border: 1px solid lightblue;
+}
+.list-btn > li:nth-child(7) button {
+  width: 90px;
+}
+
+.article-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recommendation-article {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-top: 10px;
+  margin: 10px 10px 0px 0px;
+}
+.recommendation-article img {
+  height: 120px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.recommendation-article div:nth-child(2) {
+  margin-bottom: 5px;
+}
+.recommendation-article div:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+.recommendation-article div:nth-child(1) {
+  background: no-repeat center;
+  background-image: url("./img/logo.jpg");
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.more-btn {
+  display: flex;
+  justify-content: center;
+}
+.more-btn button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  font-weight: 600;
+}
+
+.section-right {
+  width: 35%;
+}
+.section-right .login {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.section-right .login-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.section-right .login-header {
+  margin-bottom: 15px;
+}
+.section-right .login-naver {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #03c75a;
+}
+.section-right .login-naver div:first-child {
+  background: no-repeat center;
+  background-image: url("./img/naver.png");
+  background-size: 100%;
+  width: 100px;
+}
+.section-right .login-naver div:last-child {
+  color: white;
+}
+.section-right .weather {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.section-right .weather-wrap {
+  padding: 20px;
+}
+.section-right .weather-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+.section-right .weather-title div:first-child {
+  display: flex;
+}
+.section-right .stock {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: rgb(243, 243, 243);
+  border-top: 1px solid lightgray;
+}
+
+.footer-wrap {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.footer-wrap .footer-notice {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.footer-wrap .footer-info .creators {
+  display: flex;
+  flex-direction: row;
+}
+.footer-wrap .footer-info .creators a {
+  margin-left: 10px;
+  margin-right: 10px;
 }/*# sourceMappingURL=index.css.map */
