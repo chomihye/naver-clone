@@ -32,7 +32,7 @@ main {
     background-image: url("./img/ham.png");
     background-size: 70px;
 }
-// block속성으로 바꿔서 하는게 맞는건지..
+// block
 .naverpay-btn {
     display: block;
     width: 50px;
@@ -248,15 +248,16 @@ main {
     flex-wrap: wrap;
 }
 
-//선택자
+//추천, 구독
 .recommendation-article {
     display: flex;
     flex-direction: column;
 
-    width: calc(100% / 4);
+    width: calc(100% / 4 - 10px);
     // width: 180px;
     margin-top: 10px;
-    margin: 10px 10px 0px 0px;
+    margin-right: 10px;
+    // margin: 10px 10px 0px 0px;
 
     img {
         height: 120px;
@@ -342,7 +343,7 @@ main {
             }
         }
     }
-
+    //날씨
     .weather {
         border: 1px solid lightgray;
         border-radius: 10px;
@@ -355,30 +356,261 @@ main {
         &-title {
             display: flex;
             justify-content: space-between;
-            padding-bottom: 20px;
+            align-items: center;
+            padding-bottom: 15px;
 
             border-bottom: 1px solid lightgray;
 
             div:first-child {
                 display: flex;
+                align-items: center;
+
+                span {
+                    margin-right: 5px;
+                }
+
+                a {
+                    width: 80px;
+                    padding: 5px;
+
+                    border: 1px solid lightgray;
+                    border-radius: 20px;
+                }
             }
         }
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+
+            .temperature {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 60px;
+            }
+            div:first-child {
+                font-size: 40px;
+                margin-bottom: 5px;
+            }
+            div:last-child {
+                font-size: 14px;
+            }
+        }
+        &-graph {
+            width: 50%;
+            border: 1px solid lightgray;
+        }
     }
+    //주식
     .stock {
         border: 1px solid lightgray;
         border-radius: 10px;
+        margin-bottom: 20px;
+
+        &-wrap {
+            padding: 20px;
+        }
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+
+            border-bottom: 1px solid lightgray;
+
+            button:nth-child(2) {
+                width: 20px;
+
+                border: 1px solid lightgray;
+                border-radius: 50%;
+                background-color: white;
+                color: lightgray;
+            }
+            .reload {
+                display: block;
+                background: no-repeat center;
+                background-image: url("./img/reload.png");
+                background-size: 20px;
+                width: 30px;
+                height: 20px;
+
+                border: none;
+            }
+        }
+        &-time {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 14px;
+        }
+        &-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            div:first-child {
+                width: 50%;
+                // border: 1px solid lightgray;
+            }
+
+            div:last-child {
+                width: 50%;
+
+                ul {
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+
+                        border-bottom: 1px solid lightgray;
+                        padding: 10px 0px;
+                    }
+                }
+            }
+        }
+    }
+    //위젯
+    .widget {
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        background-color: #f4f6fa;
+
+        &-wrap {
+            padding: 20px;
+        }
+
+        &-title {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        &-inner {
+            display: flex;
+            flex-wrap: wrap;
+
+            article {
+                width: calc(100% / 2 - 5px);
+                height: 200px;
+
+                margin-bottom: 10px;
+                margin-right: 5px;
+
+                border-radius: 10px;
+                background-color: white;
+            }
+        }
+        &-calendar {
+            border: 1px solid lightgray;
+            padding: 20px;
+
+            div:nth-child(1) {
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+            div:nth-child(2) {
+                margin-bottom: 80px;
+            }
+            span:nth-child(1) {
+                font-size: 36px;
+                margin-right: 5px;
+            }
+        }
+        &-memo {
+            border: 1px solid lightgray;
+
+            div {
+                font-weight: 600;
+                color: white;
+                background-color: #03c75a;
+
+                margin-bottom: 105px;
+                padding: 20px;
+                border-radius: 10px 10px 0px 0px;
+            }
+            a {
+                padding-left: 20px;
+            }
+        }
+        &-papago {
+            border: 1px solid lightgray;
+            padding: 20px;
+
+            img {
+                width: 80px;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+                height: 150px;
+            }
+
+            button {
+                width: 120px;
+                height: 40px;
+                border-radius: 30px;
+                border: none;
+                color: white;
+                font-weight: 600;
+                background-color: #00a2ff;
+            }
+        }
+        &-dictionary {
+            border: 1px solid lightgray;
+            padding: 20px;
+
+            span {
+                font-weight: 600;
+            }
+            p {
+                margin-top: 20px;
+                font-size: 20px;
+            }
+            div {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    display: block;
+                    background: no-repeat center;
+                    background-image: url("./img/search.png");
+                    background-size: 25px;
+
+                    padding: 20px;
+
+                    border: 1px solid lightgray;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &-now {
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            background-color: white;
+        }
     }
 }
-//footer
 
+//footer
 footer {
     background-color: rgb(243, 243, 243);
     border-top: 1px solid lightgray;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 .footer-wrap {
     width: 70%;
     margin: 0 auto;
-    padding-top: 60px;
+    font-size: 15px;
 
     .footer-notice {
         display: flex;
@@ -390,13 +622,70 @@ footer {
     }
 
     .footer-info {
-        .creators {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid lightgray;
+
+        h3 {
+            font-weight: 600;
+            margin-right: 20px;
+        }
+
+        .creators,
+        .partners,
+        .developers {
             display: flex;
             flex-direction: row;
 
+            margin: 20px 0px;
+
             a {
-                margin-left: 10px;
-                margin-right: 10px;
+                margin: 0px 10px;
+            }
+        }
+
+        &-right {
+            display: flex;
+
+            .footer-whale {
+                margin-right: 50px;
+            }
+
+            .footer-whale,
+            .footer-project {
+                display: flex;
+                flex-direction: row;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 30px;
+                }
+
+                span:first-child {
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                span:last-child {
+                    font-size: 14px;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+        &-bottom {
+            .bottom-wrap {
+                display: flex;
+                justify-content: center;
+                margin: 40px 0px;
+
+                a {
+                    margin: 0px 10px;
+                }
             }
         }
     }
