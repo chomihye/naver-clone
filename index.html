@@ -8,84 +8,92 @@
         <link rel="stylesheet" href="./index.css" />
     </head>
     <body>
-        <header>
-            <div class="header-wrap">
-                <button type="button" class="hamburger-btn"></button>
-                <div class="header-wrap-btn">
-                    <a href="#" class="naverpay-btn"></a>
-                    <a href="#" class="notice-btn"></a>
+        <div class="container">
+            <header>
+                <div class="header-wrap">
+                    <div class="hamber-btn-wrap">
+                        <button type="button" class="hamburger-btn"></button>
+                        <div class="shortcut">바로가기</div>
+                    </div>
+                    <div class="header-wrap-btn">
+                        <a href="#" class="naverpay-btn"></a>
+                        <a href="#" class="notice-btn"></a>
+                    </div>
                 </div>
-            </div>
-            <div class="naver-search-wrap">
-                <input type="search" class="naver-search" />
-                <!-- <a href="#"><img src="./img/nlogo.png" alt="" /></a> -->
-            </div>
-
-            <ul class="menu-icon">
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>메일</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>카페</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>블로그</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>쇼핑</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>뉴스</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>증권</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>부동산</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>지도</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>웹툰</span>
-                    </a>
-                </li>
-                <li class="mail">
-                    <a href="#">
-                        <div class="img-btn"></div>
-                        <span>...</span>
-                    </a>
-                </li>
-            </ul>
-        </header>
-        <main>
-            <div class="section-wrap">
+                <div class="naver-search-wrap">
+                    <label class="input-label">
+                        <input type="search" class="naver-search" />
+                        <a href="#" class="n-logo"><img src="./img/nlogo.png" alt="네이버N로고" /></a>
+                        <div class="btn-wrap">
+                            <button type="button" class="keyboard"></button>
+                            <button type="button" class="arrow-down"></button>
+                            <button type="button" class="search"></button>
+                        </div>
+                    </label>
+                </div>
+                <ul class="menu-icon">
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>메일</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>카페</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>블로그</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>쇼핑</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>뉴스</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>증권</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>부동산</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>지도</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                            <span>웹툰</span>
+                        </a>
+                    </li>
+                    <li class="mail">
+                        <a href="#">
+                            <div class="img-btn"></div>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+            <main>
                 <div class="section-left">
                     <section class="section-left-news">
                         <div class="news-wrap">
@@ -281,8 +289,8 @@
                         <div class="more-btn"><button type="button">펼쳐보기 +</button></div>
                     </section>
                 </div>
-                <div class="section-right">
-                    <section class="login">
+                <aside>
+                    <div class="login">
                         <div class="login-wrap">
                             <div class="login-header">네이버를 더 안전하고 편리하게 이용하세요</div>
                             <a href="#" class="login-naver">
@@ -294,8 +302,8 @@
                                 <span>회원가입</span>
                             </div>
                         </div>
-                    </section>
-                    <section class="weather">
+                    </div>
+                    <div class="weather">
                         <div class="weather-wrap">
                             <div class="weather-title">
                                 <div>
@@ -312,17 +320,17 @@
                                         <div>구름많음</div>
                                     </a>
                                     <!-- <a href="#" class="temperature">
-                                        <div>26/36</div>
-                                        <div>미세 <span>좋음</span> 초미세 <span>좋음</span></div>
-                                    </a> -->
+                                            <div>26/36</div>
+                                            <div>미세 <span>좋음</span> 초미세 <span>좋음</span></div>
+                                        </a> -->
                                 </div>
                                 <div class="weather-graph">
                                     <a href="#">날씨 그래프</a>
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section class="stock">
+                    </div>
+                    <div class="stock">
                         <div class="stock-wrap">
                             <div class="stock-title">
                                 <div>
@@ -347,8 +355,8 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section class="widget">
+                    </div>
+                    <div class="widget">
                         <div class="widget-wrap">
                             <div class="widget-title">위젯보드</div>
                             <div class="widget-inner">
@@ -378,14 +386,42 @@
                                 </article>
                             </div>
                             <article class="widget-now">
-                                <img src="./img/now.png" alt="" />
+                                <img src="./img/now.png" alt="now 로고" />
+                                <ul>
+                                    <li>
+                                        <div>이미지</div>
+                                        <span>NewJeans 커밍쑨</span>
+                                    </li>
+                                    <li>
+                                        <div>이미지</div>
+                                        <span>NewJeans 커밍쑨</span>
+                                    </li>
+                                    <li>
+                                        <div>이미지</div>
+                                        <span>NewJeans 커밍쑨</span>
+                                    </li>
+                                    <li>
+                                        <div>이미지</div>
+                                        <span>NewJeans 커밍쑨</span>
+                                    </li>
+                                </ul>
                             </article>
                         </div>
-                    </section>
-                </div>
-            </div>
-            <div></div>
-        </main>
+                        <div>
+                            <a href="#" class="asdie-open-mobile">
+                                <div>
+                                    <span class="nlogo-small"></span>
+                                    <span>모바일 네이버 메인</span>열기
+                                </div>
+                                &gt;
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <div></div>
+            </main>
+        </div>
         <footer>
             <div class="footer-wrap">
                 <div class="footer-notice">
