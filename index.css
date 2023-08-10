@@ -46,37 +46,140 @@ main {
   border-radius: 50%;
 }
 
-.shortcut {
+.shortcut-tooltip {
   display: none;
-  width: 100px;
-  height: 40px;
-  padding: 10px;
   position: absolute;
+  left: -15px;
+  top: 55px;
+}
+.shortcut-tooltip-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  padding: 10px 5px;
   border: 1px solid #03c75a;
   border-radius: 30px;
-  display: none;
+}
+.shortcut-tooltip::after {
+  content: "";
+  background: no-repeat center;
+  background-size: 15px;
+  background-image: url("./img/arr.png");
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+  position: absolute;
+  top: -11px;
+  left: 35px;
+  transform: scaleY(-1);
 }
 
-.hamburger-btn:hover + .shortcut {
+.hamburger-btn:hover + .shortcut-tooltip {
   display: block;
+}
+
+.naverpay-wrap {
+  position: relative;
 }
 
 .naverpay-btn {
   display: block;
+  position: relative;
   width: 50px;
   height: 50px;
   background: no-repeat center;
   background-image: url("./img/pay.png");
   background-size: 35px;
 }
+.naverpay-btn:hover {
+  background-color: #eeeeee;
+  border-radius: 50%;
+}
 
-.notice-btn {
+.naverpay-tooltip {
+  display: none;
+  position: absolute;
+  left: -20px;
+  top: 55px;
+}
+.naverpay-tooltip-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 10px 5px;
+  border: 1px solid #03c75a;
+  border-radius: 30px;
+}
+.naverpay-tooltip::after {
+  content: "";
+  background: no-repeat center;
+  background-size: 15px;
+  background-image: url("./img/arr.png");
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+  position: absolute;
+  top: -11px;
+  left: 38px;
+  transform: scaleY(-1);
+}
+
+.naverpay-btn:hover + .naverpay-tooltip {
+  display: block;
+}
+
+.notice-wrap {
+  position: relative;
+}
+.notice-wrap .notice-btn {
   display: block;
   width: 50px;
   height: 50px;
   background: no-repeat center;
   background-image: url("./img/noti.png");
   background-size: 70px;
+}
+.notice-wrap .notice-btn:hover {
+  background-color: #eeeeee;
+  border-radius: 50%;
+}
+
+.notice-tooltip {
+  display: none;
+  position: absolute;
+  left: -20px;
+  top: 55px;
+}
+.notice-tooltip-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  padding: 10px 5px;
+  border: 1px solid #03c75a;
+  border-radius: 30px;
+}
+.notice-tooltip::after {
+  content: "";
+  background: no-repeat center;
+  background-size: 15px;
+  background-image: url("./img/arr.png");
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+  position: absolute;
+  top: -11px;
+  left: 38px;
+  transform: scaleY(-1);
+}
+
+.notice-btn:hover + .notice-tooltip {
+  display: block;
 }
 
 .naver-search-wrap {
@@ -93,6 +196,9 @@ main {
   border: 1px solid #03c75a;
   border-radius: 30px;
   outline: none;
+}
+.naver-search-wrap .input-label .naver-search:hover {
+  box-shadow: 3px 3px 10px #d4d4d4;
 }
 .naver-search-wrap .input-label .n-logo {
   position: absolute;
@@ -191,6 +297,10 @@ main {
   margin: 0px 8px;
   color: #666;
 }
+.news-header a:focus {
+  font-weight: 600;
+  color: black;
+}
 
 .news-title {
   display: flex;
@@ -212,6 +322,23 @@ main {
   border: 1px solid lightgray;
   padding: 20px 0px;
 }
+.news-list li:hover {
+  background-color: #00a2ff;
+}
+.news-list li:hover .news-logo {
+  display: none;
+}
+.news-list li .add-contents {
+  display: none;
+  color: white;
+}
+.news-list li .add-contents a {
+  color: white;
+  font-weight: 600;
+}
+.news-list li:hover .add-contents {
+  display: block;
+}
 
 .more-news {
   display: flex;
@@ -221,6 +348,10 @@ main {
 }
 .more-news div {
   margin: 0 10px;
+  font-size: 14px;
+}
+.more-news div span {
+  color: #00a2ff;
 }
 .more-news button {
   font-size: 18px;
@@ -252,6 +383,10 @@ main {
   color: #666;
   margin: 0 8px;
 }
+.recommendation-header a:focus {
+  font-weight: 600;
+  color: black;
+}
 
 .list-btn-wrap {
   display: flex;
@@ -262,7 +397,7 @@ main {
   border-radius: 5px;
   padding: 5px;
 }
-.list-btn-wrap div {
+.list-btn-wrap a {
   padding-right: 10px;
   font-weight: 600;
   font-size: 15px;
@@ -282,6 +417,13 @@ main {
   background-color: white;
   border-radius: 20px;
 }
+.list-btn > li button:hover {
+  background-color: #eeeeee;
+}
+.list-btn > li:nth-child(1) button {
+  background-color: #00a2ff;
+  color: white;
+}
 .list-btn > li:nth-child(2) button {
   border: 1px solid lightblue;
 }
@@ -298,13 +440,21 @@ main {
   display: flex;
   flex-direction: column;
   width: calc(25% - 10px);
-  margin-top: 10px;
-  margin-right: 10px;
+  margin: 10px 10px 20px 0px;
 }
-.recommendation-article img {
+.recommendation-article .img-warp {
   height: 120px;
+  overflow: hidden;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+.recommendation-article img {
+  width: 100%;
+  height: 100%;
+}
+.recommendation-article img:hover {
+  transition: all 0.6s;
+  transform: scale(1.1);
 }
 .recommendation-article div:nth-child(2) {
   margin-bottom: 5px;
@@ -313,7 +463,7 @@ main {
   display: flex;
   align-items: center;
 }
-.recommendation-article div:nth-child(1) {
+.recommendation-article .s-logo {
   background: no-repeat center;
   background-image: url("./img/logo.jpg");
   background-size: 20px;
@@ -334,6 +484,9 @@ main {
   border-radius: 10px;
   background-color: white;
   font-weight: 600;
+}
+.more-btn span {
+  color: #00a2ff;
 }
 
 aside {
@@ -361,6 +514,10 @@ aside .login-naver {
   padding: 20px;
   border-radius: 5px;
   background-color: #03c75a;
+}
+aside .login-naver:hover {
+  text-decoration: none;
+  background-color: #04a74d;
 }
 aside .login-naver div:first-child {
   background: no-repeat center;
@@ -390,19 +547,39 @@ aside .weather-title div:first-child {
   display: flex;
   align-items: center;
 }
-aside .weather-title div:first-child span {
+aside .weather-title div:first-child a:nth-child(1) {
   margin-right: 5px;
+  font-weight: 600;
 }
-aside .weather-title div:first-child a {
+aside .weather-title div:first-child a:nth-child(2) {
   width: 80px;
   padding: 5px;
   border: 1px solid lightgray;
   border-radius: 20px;
+  font-size: 12px;
+  text-decoration: none;
+}
+aside .weather-title div:first-child a:nth-child(2):hover {
+  background-color: #eeeeee;
+}
+aside .weather-title div:first-child a:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  background: no-repeat center;
+  background-size: 15px;
+  background-image: url("./img/tem.png");
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+aside .weather-location {
+  font-size: 14px;
 }
 aside .weather-inner {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0px;
+  margin-top: 20px;
 }
 aside .weather-inner .temperature {
   display: flex;
@@ -410,17 +587,45 @@ aside .weather-inner .temperature {
 }
 aside .weather-info {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
-aside .weather-info img {
-  width: 60px;
+aside .weather-info-now {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
 }
-aside .weather-info div:first-child {
+aside .weather-info-now img {
+  width: 60px;
+  margin-right: 10px;
+}
+aside .weather-info-now div:first-child {
   font-size: 40px;
   margin-bottom: 5px;
 }
-aside .weather-info div:last-child {
+aside .weather-info-now div:last-child {
   font-size: 14px;
+}
+aside .weather-info-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+aside .weather-info-detail div:nth-child(1) {
+  margin-bottom: 10px;
+}
+aside .weather-info-detail div:nth-child(1) span:nth-child(1) {
+  color: lightskyblue;
+}
+aside .weather-info-detail div:nth-child(1) span:nth-child(2) {
+  color: red;
+}
+aside .weather-info-detail div:nth-child(2) span {
+  color: lightskyblue;
+}
+aside .weather-info a {
+  text-decoration: none;
 }
 aside .weather-graph {
   width: 50%;
@@ -643,6 +848,9 @@ footer {
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
 }
+.footer-wrap .footer-notice a:first-child {
+  font-weight: 600;
+}
 .footer-wrap .footer-info {
   display: flex;
   justify-content: space-between;
@@ -703,4 +911,8 @@ footer {
 }
 .footer-wrap .footer-info-bottom .bottom-wrap a {
   margin: 0px 10px;
+}
+.footer-wrap .footer-info-bottom .bottom-wrap a:nth-child(5),
+.footer-wrap .footer-info-bottom .bottom-wrap a:nth-child(9) {
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */
