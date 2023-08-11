@@ -7,6 +7,7 @@
 * {
     box-sizing: border-box;
 }
+
 .container {
     width: 1280px;
     margin: 10px auto 40px;
@@ -225,9 +226,15 @@ main {
             border: 1px solid #03c75a;
             border-radius: 30px;
             outline: none;
+            padding-left: 60px;
+            padding-top: 5px;
 
             &:hover {
                 box-shadow: 3px 3px 10px #d4d4d4;
+            }
+
+            &::placeholder {
+                font-size: 20px;
             }
         }
 
@@ -252,6 +259,7 @@ main {
         }
 
         .keyboard {
+            position: relative;
             display: block;
             background: no-repeat center;
             background-image: url("./img/k.png");
@@ -260,11 +268,25 @@ main {
             width: 30px;
             height: 30px;
             border: none;
-            // position: absolute;
 
-            // right: 100px;
-            // top: 20px;
+            .input-tool {
+                display: none;
+                position: absolute;
+                top: -10px;
+                right: -35px;
+
+                background: no-repeat center;
+                background-image: url("./img/kkk.png");
+                background-size: 70px;
+
+                width: 100px;
+                height: 100px;
+            }
+            &:hover .input-tool {
+                display: block;
+            }
         }
+
         .arrow-down {
             display: block;
             background: no-repeat center;
@@ -274,24 +296,16 @@ main {
             width: 30px;
             height: 30px;
             border: none;
-            // position: absolute;
-
-            // right: 60px;
-            // top: 18px;
         }
         .search {
             display: block;
             background: no-repeat center;
-            background-image: url("./img/search.png");
+            background-image: url("./img/i-se.png");
             background-size: 30px;
 
             width: 30px;
             height: 60px;
             border: none;
-            // position: absolute;
-
-            // right: 0px;
-            // top: 5px;
         }
     }
 }
@@ -348,6 +362,92 @@ main {
     font-size: 17px;
     color: #999;
 
+    .newsstand-wrap,
+    .newsedit-wrap {
+        position: relative;
+    }
+
+    .newsstand-tooltip {
+        display: none;
+
+        position: absolute;
+        top: -50px;
+        background-color: white;
+
+        &-contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            padding: 10px 5px;
+
+            font-size: 14px;
+            border: 1px solid #03c75a;
+            border-radius: 30px;
+            color: #666;
+        }
+
+        &::after {
+            content: "";
+            background: no-repeat center;
+            background-size: 15px;
+            background-image: url("./img/arr.png");
+            background-color: white;
+
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+
+            position: absolute;
+            top: 32px;
+            left: 38px;
+        }
+    }
+    .newsstand-wrap:hover .newsstand-tooltip {
+        display: block;
+    }
+
+    .newsedit-tooltip {
+        display: none;
+
+        position: absolute;
+        top: -50px;
+        right: -30px;
+        background-color: white;
+
+        &-contents {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            padding: 10px 5px;
+
+            font-size: 14px;
+            border: 1px solid #03c75a;
+            border-radius: 30px;
+            color: #666;
+        }
+
+        &::after {
+            content: "";
+            background: no-repeat center;
+            background-size: 15px;
+            background-image: url("./img/arr.png");
+            background-color: white;
+
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+
+            position: absolute;
+            top: 32px;
+            right: 64px;
+        }
+    }
+    .newsedit-wrap:hover .newsedit-tooltip {
+        display: block;
+    }
+
     a {
         margin: 0px 8px;
         color: #666;
@@ -356,6 +456,17 @@ main {
             font-weight: 600;
             color: black;
         }
+    }
+    .sport-live {
+        display: inline-block;
+        width: 50px;
+        height: 20px;
+        text-align: center;
+
+        background-color: red;
+        border-radius: 15px;
+        color: white;
+        margin-right: 5px;
     }
 }
 .news-title {
@@ -405,6 +516,8 @@ main {
     justify-content: center;
     align-items: center;
 
+    position: relative;
+
     padding: 10px;
 
     div {
@@ -416,13 +529,58 @@ main {
         }
     }
 
-    button {
+    .arrow-left,
+    .arrow-right {
         font-size: 18px;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         border: 1px solid lightgray;
         background-color: white;
+    }
+
+    .view-btn-wrap {
+        position: absolute;
+        right: 0px;
+
+        button:first-child {
+            background: no-repeat center;
+            background-size: 30px;
+            background-image: url("./img/me.png");
+
+            width: 40px;
+            height: 40px;
+            border: none;
+
+            &:hover {
+                background: no-repeat center;
+                background-size: 28px;
+                background-image: url("./img/me-g.png");
+
+                width: 40px;
+                height: 40px;
+                border: none;
+            }
+        }
+        button:last-child {
+            background: no-repeat center;
+            background-size: 35px;
+            background-image: url("./img/b.png");
+
+            width: 40px;
+            height: 40px;
+            border: none;
+
+            &:hover {
+                background: no-repeat center;
+                background-size: 30px;
+                background-image: url("./img/b-b.png");
+
+                width: 40px;
+                height: 40px;
+                border: none;
+            }
+        }
     }
 }
 
@@ -575,6 +733,7 @@ main {
 //오른쪽부분
 aside {
     width: 420px;
+    // position: sticky;
 
     .login {
         border: 1px solid lightgray;
@@ -591,6 +750,7 @@ aside {
 
         &-header {
             margin-bottom: 15px;
+            font-size: 14px;
         }
 
         &-naver {
@@ -618,6 +778,10 @@ aside {
             div:last-child {
                 color: white;
             }
+        }
+        &-find {
+            font-size: 14px;
+            color: #666;
         }
     }
     //날씨
@@ -899,6 +1063,10 @@ aside {
                 color: white;
                 font-weight: 600;
                 background-color: #00a2ff;
+
+                &:hover {
+                    background-color: #0285d1;
+                }
             }
         }
         &-dictionary {
@@ -909,8 +1077,19 @@ aside {
                 font-weight: 600;
             }
             p {
+                height: 55%;
+
                 margin-top: 20px;
                 font-size: 20px;
+
+                &:hover {
+                    font-size: 0px;
+                }
+
+                &:hover::before {
+                    font-size: 16px;
+                    content: "무엇을 먹어야 할지 아는 것은 매우 혼란스럽다";
+                }
             }
             div {
                 display: flex;
@@ -926,6 +1105,28 @@ aside {
 
                     border: 1px solid lightgray;
                     border-radius: 50%;
+
+                    &:hover {
+                        background: no-repeat center;
+                        background-image: url("./img/search-w.png");
+                        background-size: 25px;
+                        background-color: #004f7c;
+                        background-position: 93%;
+
+                        width: 150px;
+                        border-radius: 20px;
+                    }
+                    &:hover {
+                        padding: 10px;
+                    }
+
+                    &:hover::before {
+                        content: "단어 검색하기";
+                        font-size: 14px;
+                        margin-right: 15px;
+                        color: white;
+                        font-weight: 600;
+                    }
                 }
             }
         }
