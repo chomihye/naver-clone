@@ -1,3 +1,37 @@
+@font-face {
+    font-family: "NanumBarunGothic";
+    font-style: normal;
+    font-weight: 400;
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NanumBarunGothic";
+    font-style: normal;
+    font-weight: 700;
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix") format("embedded-opentype"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff") format("woff"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NanumBarunGothic";
+    font-style: normal;
+    font-weight: 300;
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot");
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix") format("embedded-opentype"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff") format("woff"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf") format("truetype");
+}
+
+.nanumbarungothic * {
+    font-family: "NanumBarunGothic", sans-serif;
+}
+
 @mixin center {
     display: flex;
     flex-direction: column;
@@ -6,6 +40,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: "NanumBarunGothic";
 }
 
 .container {
@@ -34,8 +69,37 @@ main {
     }
 }
 
-.hamber-btn-wrap {
+.hamburger-btn-wrap {
     position: relative;
+}
+.shortcut {
+    // display: none;
+    border: 1px solid lightgray;
+    width: 400px;
+
+    padding: 20px;
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 20px;
+    }
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-btn {
+        // border: 1px solid red;
+        width: 50px;
+        height: 50px;
+
+        background: no-repeat center;
+        background-image: url("./img/mail.png");
+        background-size: 120px;
+    }
 }
 
 .hamburger-btn {
@@ -53,6 +117,10 @@ main {
         border-radius: 50%;
     }
 }
+.hamburger-btn:active + .shortcut {
+    display: block;
+}
+
 .shortcut-tooltip {
     display: none;
 
@@ -69,6 +137,7 @@ main {
 
         border: 1px solid #03c75a;
         border-radius: 30px;
+        font-size: 14px;
     }
 
     &::after {
@@ -129,6 +198,7 @@ main {
 
         border: 1px solid #03c75a;
         border-radius: 30px;
+        font-size: 14px;
     }
 
     &::after {
@@ -188,6 +258,7 @@ main {
 
         border: 1px solid #03c75a;
         border-radius: 30px;
+        font-size: 14px;
     }
 
     &::after {
