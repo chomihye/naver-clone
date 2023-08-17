@@ -59,29 +59,6 @@ main {
   position: relative;
 }
 
-.shortcut {
-  border: 1px solid lightgray;
-  width: 400px;
-  padding: 20px;
-}
-.shortcut-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 20px;
-}
-.shortcut a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.shortcut-btn {
-  width: 50px;
-  height: 50px;
-  background: no-repeat center;
-  background-image: url("./img/mail.png");
-  background-size: 120px;
-}
-
 .hamburger-btn {
   width: 50px;
   height: 50px;
@@ -133,6 +110,161 @@ main {
 
 .hamburger-btn:hover + .shortcut-tooltip {
   display: block;
+}
+
+.shortcut {
+  background-color: #f2f2f2;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgb(235, 234, 234);
+  width: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.shortcut-inner {
+  height: 500px;
+  overflow-y: scroll;
+}
+.shortcut-wrap {
+  margin-bottom: 20px;
+  border-radius: 10px 0px 0px 0px;
+  background-color: white;
+  background-color: rgb(252, 252, 252);
+  padding-bottom: 20px;
+}
+.shortcut-header {
+  border-bottom: 1px solid lightgray;
+  padding: 20px;
+  font-weight: 600;
+}
+.shortcut-login {
+  padding: 20px;
+}
+.shortcut-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 20px;
+}
+.shortcut a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shortcut a:hover {
+  text-decoration: none;
+}
+.shortcut a span {
+  font-size: 14px;
+}
+.shortcut span:nth-child(1) {
+  font-weight: 600;
+}
+.shortcut-btn {
+  width: 50px;
+  height: 50px;
+  background: no-repeat center;
+  background-image: url("./img/mail.png");
+  background-size: 120px;
+  margin-bottom: 5px;
+}
+.shortcut-service {
+  background-color: rgb(252, 252, 252);
+  margin-top: 20px;
+  padding: 20px;
+}
+.shortcut-service .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.shortcut-service .header h3 {
+  font-weight: 600;
+}
+.shortcut-service-news, .shortcut-service-finance, .shortcut-service-entertainment, .shortcut-service-shopping, .shortcut-service-membership, .shortcut-service-mytool, .shortcut-service-certification, .shortcut-service-community, .shortcut-service-travel, .shortcut-service-dictionary {
+  margin-bottom: 20px;
+  box-shadow: 3px 3px 10px rgb(235, 234, 234);
+  border-radius: 10px;
+  background-color: white;
+}
+.shortcut-service-news span:nth-child(2), .shortcut-service-finance span:nth-child(2), .shortcut-service-entertainment span:nth-child(2), .shortcut-service-shopping span:nth-child(2), .shortcut-service-membership span:nth-child(2), .shortcut-service-mytool span:nth-child(2), .shortcut-service-certification span:nth-child(2), .shortcut-service-community span:nth-child(2), .shortcut-service-travel span:nth-child(2), .shortcut-service-dictionary span:nth-child(2) {
+  color: #00a2ff;
+}
+.shortcut-service-news .title, .shortcut-service-finance .title, .shortcut-service-entertainment .title, .shortcut-service-shopping .title, .shortcut-service-membership .title, .shortcut-service-mytool .title, .shortcut-service-certification .title, .shortcut-service-community .title, .shortcut-service-travel .title, .shortcut-service-dictionary .title {
+  background-color: #e5f0f9;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+.shortcut-service-news a, .shortcut-service-finance a, .shortcut-service-entertainment a, .shortcut-service-shopping a, .shortcut-service-membership a, .shortcut-service-mytool a, .shortcut-service-certification a, .shortcut-service-community a, .shortcut-service-travel a, .shortcut-service-dictionary a {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.shortcut-service-news .s-img, .shortcut-service-finance .s-img, .shortcut-service-entertainment .s-img, .shortcut-service-shopping .s-img, .shortcut-service-membership .s-img, .shortcut-service-mytool .s-img, .shortcut-service-certification .s-img, .shortcut-service-community .s-img, .shortcut-service-travel .s-img, .shortcut-service-dictionary .s-img {
+  width: 30px;
+  height: 30px;
+  background: no-repeat center;
+  background-image: url("./img/mail.png");
+  background-size: 80px;
+  margin-right: 5px;
+}
+.shortcut-service-news .icon-wrap, .shortcut-service-finance .icon-wrap, .shortcut-service-entertainment .icon-wrap, .shortcut-service-shopping .icon-wrap, .shortcut-service-membership .icon-wrap, .shortcut-service-mytool .icon-wrap, .shortcut-service-certification .icon-wrap, .shortcut-service-community .icon-wrap, .shortcut-service-travel .icon-wrap, .shortcut-service-dictionary .icon-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.shortcut-service-partners {
+  background-color: white;
+  margin-bottom: 30px;
+}
+.shortcut-service-partners .title {
+  background-color: #e5f0f9;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px 10px 0px 0px;
+}
+.shortcut-service-partners .s-title {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 20px 10px 10px 10px;
+}
+.shortcut-service-partners .icon-wrap {
+  padding: 10px;
+}
+.shortcut-service-partners a {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.shortcut-service-partners a .s-img {
+  width: 30px;
+  height: 30px;
+  background: no-repeat center;
+  background-image: url("./img/mail.png");
+  background-size: 80px;
+  margin-right: 5px;
+}
+.shortcut-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shortcut-footer-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.shortcut-footer-wrap a {
+  margin: 0px 10px 0px;
+}
+.shortcut-footer .naver-logo {
+  width: 100px;
+  height: 100px;
+  background: no-repeat center;
+  background-image: url("./img/naver.png");
+  background-size: 100px;
 }
 
 .naverpay-wrap {

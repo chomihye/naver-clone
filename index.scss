@@ -72,35 +72,6 @@ main {
 .hamburger-btn-wrap {
     position: relative;
 }
-.shortcut {
-    // display: none;
-    border: 1px solid lightgray;
-    width: 400px;
-
-    padding: 20px;
-
-    &-list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        row-gap: 20px;
-    }
-
-    a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &-btn {
-        // border: 1px solid red;
-        width: 50px;
-        height: 50px;
-
-        background: no-repeat center;
-        background-image: url("./img/mail.png");
-        background-size: 120px;
-    }
-}
 
 .hamburger-btn {
     width: 50px;
@@ -160,6 +131,211 @@ main {
 
 .hamburger-btn:hover + .shortcut-tooltip {
     display: block;
+}
+//헤더안에어사이드?
+
+.shortcut {
+    // display: none;
+    background-color: #f2f2f2;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(235, 234, 234);
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+
+    &-inner {
+        height: 500px;
+        overflow-y: scroll;
+
+        // &::after {
+        //     content: "";
+        //     background: no-repeat center;
+        //     background-size: 15px;
+        //     background-image: url("./img/arg.png");
+
+        //     width: 15px;
+        //     height: 15px;
+        //     vertical-align: middle;
+        //     margin-right: 5px;
+
+        //     position: absolute;
+        //     top: -13px;
+        //     left: 18px;
+        // }
+    }
+
+    &-wrap {
+        margin-bottom: 20px;
+        border-radius: 10px 0px 0px 0px;
+        background-color: white;
+        background-color: rgb(252, 252, 252);
+        padding-bottom: 20px;
+    }
+
+    &-header {
+        border-bottom: 1px solid lightgray;
+        padding: 20px;
+        font-weight: 600;
+    }
+    &-login {
+        padding: 20px;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 20px;
+    }
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+    span:nth-child(1) {
+        font-weight: 600;
+    }
+
+    &-btn {
+        width: 50px;
+        height: 50px;
+
+        background: no-repeat center;
+        background-image: url("./img/mail.png");
+        background-size: 120px;
+        margin-bottom: 5px;
+    }
+
+    &-service {
+        background-color: rgb(252, 252, 252);
+        margin-top: 20px;
+        padding: 20px;
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            h3 {
+                font-weight: 600;
+            }
+        }
+        &-news,
+        &-finance,
+        &-entertainment,
+        &-shopping,
+        &-membership,
+        &-mytool,
+        &-certification,
+        &-community,
+        &-travel,
+        &-dictionary {
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 10px rgb(235, 234, 234);
+            border-radius: 10px;
+            background-color: white;
+
+            span:nth-child(2) {
+                color: #00a2ff;
+            }
+
+            .title {
+                background-color: #e5f0f9;
+                padding: 10px;
+                font-size: 15px;
+                border-radius: 10px 10px 0px 0px;
+            }
+            a {
+                display: flex;
+                flex-direction: row;
+                width: calc(100% / 2);
+                margin-bottom: 10px;
+            }
+            .s-img {
+                width: 30px;
+                height: 30px;
+
+                background: no-repeat center;
+                background-image: url("./img/mail.png");
+                background-size: 80px;
+                margin-right: 5px;
+            }
+            .icon-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+        }
+
+        &-partners {
+            background-color: white;
+            margin-bottom: 30px;
+
+            .title {
+                background-color: #e5f0f9;
+                padding: 10px;
+                font-size: 15px;
+                border-radius: 10px 10px 0px 0px;
+            }
+
+            .s-title {
+                font-size: 14px;
+                font-weight: 600;
+                padding: 20px 10px 10px 10px;
+            }
+
+            .icon-wrap {
+                padding: 10px;
+            }
+
+            a {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+
+                .s-img {
+                    width: 30px;
+                    height: 30px;
+
+                    background: no-repeat center;
+                    background-image: url("./img/mail.png");
+                    background-size: 80px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    &-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            a {
+                margin: 0px 10px 0px;
+            }
+        }
+        .naver-logo {
+            width: 100px;
+            height: 100px;
+
+            background: no-repeat center;
+            background-image: url("./img/naver.png");
+            background-size: 100px;
+        }
+    }
 }
 
 .naverpay-wrap {
