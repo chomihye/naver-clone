@@ -73,10 +73,6 @@ main {
   border-radius: 50%;
 }
 
-.hamburger-btn:active + .shortcut {
-  display: block;
-}
-
 .shortcut-tooltip {
   display: none;
   position: absolute;
@@ -113,50 +109,72 @@ main {
 }
 
 .shortcut {
+  display: none;
   background-color: #f2f2f2;
-  border: 1px solid lightgray;
+  border: 1px solid e4e6e9;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px rgb(235, 234, 234);
-  width: 400px;
-  overflow: hidden;
-  position: relative;
+  box-shadow: 3px 3px 10px rgb(218, 218, 218);
+  width: 410px;
+  z-index: 1;
+  position: absolute;
 }
 .shortcut-inner {
   height: 500px;
   overflow-y: scroll;
+  padding-top: 56px;
+}
+.shortcut-inner::after {
+  content: "";
+  background: no-repeat center;
+  background-size: 15px;
+  background-image: url("./img/arg.png");
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+  position: absolute;
+  top: -13px;
+  left: 18px;
 }
 .shortcut-wrap {
   margin-bottom: 20px;
-  border-radius: 10px 0px 0px 0px;
-  background-color: white;
   background-color: rgb(252, 252, 252);
   padding-bottom: 20px;
 }
 .shortcut-header {
+  background-color: rgb(252, 252, 252);
   border-bottom: 1px solid lightgray;
+  border-radius: 10px 0px 0px 0px;
   padding: 20px;
   font-weight: 600;
+  width: 392px;
+  position: absolute;
 }
-.shortcut-login {
+.shortcut-login > a {
+  display: flex;
+  flex-direction: row;
   padding: 20px;
+}
+.shortcut-login > a span {
+  font-weight: 600;
 }
 .shortcut-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 20px;
 }
-.shortcut a {
+.shortcut-list a {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.shortcut a:hover {
+.shortcut-list a:hover {
   text-decoration: none;
 }
-.shortcut a span {
+.shortcut-list a span {
   font-size: 14px;
 }
-.shortcut span:nth-child(1) {
+.shortcut-list span:nth-child(1) {
   font-weight: 600;
 }
 .shortcut-btn {
@@ -181,6 +199,23 @@ main {
 .shortcut-service .header h3 {
   font-weight: 600;
 }
+.shortcut-service .service-search {
+  display: flex;
+  flex-direction: row;
+}
+.shortcut-service .service-search::before {
+  content: "";
+  display: inline-block;
+  background: no-repeat center;
+  background-size: 15px;
+  background-image: url("./img/search-wh.png");
+  background-color: lightgray;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 50%;
+}
 .shortcut-service-news, .shortcut-service-finance, .shortcut-service-entertainment, .shortcut-service-shopping, .shortcut-service-membership, .shortcut-service-mytool, .shortcut-service-certification, .shortcut-service-community, .shortcut-service-travel, .shortcut-service-dictionary {
   margin-bottom: 20px;
   box-shadow: 3px 3px 10px rgb(235, 234, 234);
@@ -199,6 +234,7 @@ main {
 .shortcut-service-news a, .shortcut-service-finance a, .shortcut-service-entertainment a, .shortcut-service-shopping a, .shortcut-service-membership a, .shortcut-service-mytool a, .shortcut-service-certification a, .shortcut-service-community a, .shortcut-service-travel a, .shortcut-service-dictionary a {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 50%;
   margin-bottom: 10px;
 }
@@ -219,6 +255,9 @@ main {
   background-color: white;
   margin-bottom: 30px;
 }
+.shortcut-service-partners span:nth-child(2) {
+  color: #00a2ff;
+}
 .shortcut-service-partners .title {
   background-color: #e5f0f9;
   padding: 10px;
@@ -236,6 +275,7 @@ main {
 .shortcut-service-partners a {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-bottom: 10px;
 }
 .shortcut-service-partners a .s-img {
@@ -257,14 +297,22 @@ main {
   justify-content: center;
 }
 .shortcut-footer-wrap a {
+  font-size: 14px;
   margin: 0px 10px 0px;
+}
+.shortcut-footer-wrap a:hover {
+  text-decoration: none;
 }
 .shortcut-footer .naver-logo {
   width: 100px;
-  height: 100px;
+  height: 30px;
   background: no-repeat center;
   background-image: url("./img/naver.png");
   background-size: 100px;
+}
+
+.active {
+  display: block;
 }
 
 .naverpay-wrap {
@@ -501,9 +549,14 @@ main {
 .news-header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   margin-bottom: 20px;
   font-size: 17px;
   color: #999;
+}
+.news-header li:nth-child(4) {
+  display: flex;
+  align-items: center;
 }
 .news-header .newsstand-wrap,
 .news-header .newsedit-wrap {
@@ -587,8 +640,9 @@ main {
 .news-header .sport-live {
   display: inline-block;
   width: 50px;
-  height: 20px;
   text-align: center;
+  font-size: 14px;
+  padding: 3px;
   background-color: red;
   border-radius: 15px;
   color: white;
