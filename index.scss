@@ -913,7 +913,7 @@ main {
     align-items: center;
     margin-bottom: 10px;
 
-    background-color: rgb(238, 238, 238);
+    background-color: #f5f7f8;
     border-radius: 5px;
     padding: 5px;
 
@@ -944,17 +944,42 @@ main {
             background-color: #eeeeee;
         }
     }
-    & > li:nth-child(1) button {
-        background-color: #00a2ff;
-        color: white;
-    }
 
+    & > li:nth-child(1) button,
     & > li:nth-child(2) button {
         border: 1px solid lightblue;
     }
 
     & > li:nth-child(7) button {
         width: 90px;
+    }
+    li button:focus {
+        background-color: #00a2ff;
+        color: white;
+    }
+    li:nth-child(4) button:focus {
+        background-color: #448fc3;
+        color: white;
+    }
+    li:nth-child(5) button:focus {
+        background-color: #5188dc;
+        color: white;
+    }
+    li:nth-child(6) button:focus {
+        background-color: #538fa2;
+        color: white;
+    }
+    li:nth-child(7) button:focus {
+        background-color: #956bb9;
+        color: white;
+    }
+    li:nth-child(8) button:focus {
+        background-color: #638bc7;
+        color: white;
+    }
+    li:nth-child(9) button:focus {
+        background-color: #8284a7;
+        color: white;
     }
 }
 
@@ -1482,13 +1507,14 @@ aside {
 
 //footer
 footer {
+    font-family: "NanumBarunGothic";
     background-color: rgb(243, 243, 243);
     border-top: 1px solid lightgray;
     padding-top: 60px;
     padding-bottom: 40px;
 }
 .footer-wrap {
-    width: 70%;
+    width: 1280px;
     margin: 0 auto;
     font-size: 15px;
 
@@ -1502,6 +1528,7 @@ footer {
 
         a:first-child {
             font-weight: 600;
+            margin-right: 10px;
         }
     }
 
